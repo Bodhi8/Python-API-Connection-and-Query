@@ -1,12 +1,18 @@
 #import request packages
 import requests
 
+# assign url variable
 url = 'http://www.omdbapi.com/?hackers'
 
+#package the request
 r = requests.get(url)
 
+#decode the JSON data 
 json_data = r.json()
 
+#print key values
 for key, value in json_data.items():
 ....:     print (key + '+', value)
+
+
 
